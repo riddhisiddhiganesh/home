@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="referrer" content="no-referrer" />
+  <title>Ganesh Chaturthi 2025</title>
+
+  <!-- Font Awesome (HTTPS) -->
+  <!-- <link rel="stylesheet" href="min.css" integrity="sha512-KNghN2b7nF6GE3jQzjVW7XDWd2r3eF3c4N8jYI3w3J4z0F9kd4dWnTw0oJ5U8NzMw9fjKVG9ktZf5z0dkkVQHQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="Logo.png" alt="Riddhi Siddhi Ganesh Foundation Logo">
+    <h1>Riddhi Siddhi Ganesh Foundation</h1>
+    <p>Welcoming Lord Ganesha with joy and devotion</p>
+    <p class="tagline">Celebrating Culture, Faith & Community Since 1995</p>
+  </header>
+
+  <div class="hero-section">
+    <img class="bg-image" src="Website_background_Thumbnail.png" alt="Lord Ganesh Background">
+    <!-- <div class="hero-content">
+      <h2>Happy Ganesh Chaturthi!</h2>
+      <p>May Lord Ganesha bless you with wisdom, success, and good fortune.</p>
+      <div class="countdown" id="countdown"></div>
+    </div> -->
+  </div>
+
+  <!-- <section class="gallery-section">
+    <h2>Celebration Gallery</h2>
+    <div class="gallery">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Ganesh_Chaturthi_pandal.jpg" alt="Pandal" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Ganpati_visarjan.jpg" alt="Visarjan" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Ganesh_Chaturthi_celebration.jpg" alt="Celebration" />
+    </div> -->
+  </section>
+
+  <script>
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("2025-08-30T00:00:00").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        countdown.innerHTML = "Ganesh Chaturthi is here! 🎉";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left`;
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Riddhi Siddhi Ganesh Foundation. All rights reserved.</p>
+    <!-- <p>Follow us on: -->
+      <!-- <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook"></i> Facebook
+      </a> | -->
+      <!-- <a href="https://www.instagram.com/riddhisiddhiganeshfoundation?igsh=MTYyY3RyYnZvcTJ0dw==" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i> Instagram
+      </a> |
+      <a href="https://www.youtube.com/@riddhisiddhiganeshfoundation" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-youtube"></i> YouTube
+      </a> -->
+    </p>
+  </footer>
+</body>
+</html>
