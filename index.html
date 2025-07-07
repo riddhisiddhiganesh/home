@@ -1,79 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="referrer" content="no-referrer" />
-  <title>Ganesh Chaturthi 2025</title>
-
-  <!-- Font Awesome (HTTPS) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Riddhi Siddhi Ganesh Foundation - Celebrating Ganesh Utsav with devotion, culture, and innovation in Burhanpur, M.P.">
+  <title>Riddhi Siddhi Ganesh Foundation</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="Logo.png" type="image/png">
+  <!-- Google Fonts: Poppins for body, Yatra One for heading -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Yatra+One&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .gradient-animate {
+      background: linear-gradient(270deg, #ff9800, #ff1744, #ffd600, #ff9800);
+      background-size: 800% 800%;
+      animation: gradientBG 12s ease infinite;
+      opacity: 0.18;
+      z-index: 1;
+    }
+    @keyframes gradientBG {
+      0% {background-position:0% 50%}
+      50% {background-position:100% 50%}
+      100% {background-position:0% 50%}
+    }
+    body { font-family: 'Poppins', sans-serif; }
+    .ganesh-heading { font-family: 'Yatra One', cursive; }
+  </style>
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://riddhisiddhiganesh.in/">
+  <meta property="og:title" content="Riddhi Siddhi Ganesh Foundation">
+  <meta property="og:description" content="Celebrating Ganesh Utsav with devotion, culture, and innovation in Burhanpur, M.P.">
+  <meta property="og:image" content="https://riddhisiddhiganesh.in/Logo.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://riddhisiddhiganesh.in/">
+  <meta name="twitter:title" content="Riddhi Siddhi Ganesh Foundation">
+  <meta name="twitter:description" content="Celebrating Ganesh Utsav with devotion, culture, and innovation in Burhanpur, M.P.">
+  <meta name="twitter:image" content="https://riddhisiddhiganesh.in/Logo.png">
 </head>
-<body>
-  <header>
-    <img src="Logo.png" alt="Riddhi Siddhi Ganesh Foundation Logo">
-    <h1>Riddhi Siddhi Ganesh Foundation</h1>
-    <p>Welcoming Lord Ganesha with joy and devotion</p>
-    <p class="tagline">Celebrating Culture, Faith & Community Since 1995</p>
-  </header>
+<body class="bg-orange-50 text-gray-900 font-sans">
+    <!-- Loader Overlay -->
+    <div id="loader-overlay" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-orange-50 transition-opacity duration-700">
+      <div class="flex flex-col items-center">
+        <!-- Use loader.jpg as loader image -->
+        <img src="loader.jpg" alt="Loading..." width="100" height="100" class="mb-6 animate-pulse rounded-full shadow-lg border-4 border-orange-200"/>
+        <div class="text-xl md:text-2xl text-orange-700 font-semibold text-center max-w-md mb-2">“Vakratunda Mahakaya Suryakoti Samaprabha<br/>Nirvighnam Kuru Me Deva Sarva-Kaaryeshu Sarvada”</div>
+        <div class="text-orange-500 text-lg font-medium mt-2">Loading, please wait...</div>
+      </div>
+    </div>
+  <!-- Navbar -->
+  <nav class="fixed w-full z-30 bg-transparent">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center space-x-3">
+        <!-- Ganesha SVG Icon -->
+        <img src="Logo.png" alt="Ganesh Icon" class="h-10 w-10 rounded-full shadow-md border-2 border-orange-400 bg-white">
+        <span class="text-2xl font-bold text-orange-600 tracking-wide">Riddhi Siddhi Ganesh Foundation</span>
+      </div>
+      <button id="nav-toggle" class="md:hidden text-orange-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="#fb5607">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <ul id="nav-menu-desktop" class="hidden md:flex space-x-8 text-lg font-semibold">
+        <li><a href="#home" data-scroll class="text-orange-600 hover:text-orange-500 transition">Home</a></li>
+        <li><a href="#about" data-scroll class="text-orange-600 hover:text-orange-500 transition">About</a></li>
+        <li><a href="#gallery" data-scroll class="text-orange-600 hover:text-orange-500 transition">Gallery</a></li>
+        <li><a href="#contact" data-scroll class="text-orange-600 hover:text-orange-500 transition">Contact Us</a></li>
+      </ul>
+    </div>
+    <!-- Mobile menu -->
+    <ul id="nav-menu-mobile" class="md:hidden hidden flex-col px-4 pb-4 text-lg font-semibold bg-white/95">
+      <li><a href="#home" data-scroll class="block py-2 text-orange-600 hover:text-orange-500 transition">Home</a></li>
+      <li><a href="#about" data-scroll class="block py-2 text-orange-600 hover:text-orange-500 transition">About</a></li>
+      <li><a href="#gallery" data-scroll class="block py-2 text-orange-600 hover:text-orange-500 transition">Gallery</a></li>
+      <li><a href="#contact" data-scroll class="block py-2 text-orange-600 hover:text-orange-500 transition">Contact Us</a></li>
+    </ul>
+  </nav>
 
-  <div class="hero-section">
-    <img class="bg-image" src="Website_background_Thumbnail.png" alt="Lord Ganesh Background">
-    <!-- <div class="hero-content">
-      <h2>Happy Ganesh Chaturthi!</h2>
-      <p>May Lord Ganesha bless you with wisdom, success, and good fortune.</p>
-      <div class="countdown" id="countdown"></div>
-    </div> -->
-  </div>
-
-  <!-- <section class="gallery-section">
-    <h2>Celebration Gallery</h2>
-    <div class="gallery">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Ganesh_Chaturthi_pandal.jpg" alt="Pandal" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Ganpati_visarjan.jpg" alt="Visarjan" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Ganesh_Chaturthi_celebration.jpg" alt="Celebration" />
-    </div> -->
+  <!-- Hero Section -->
+  <section id="home" class="relative min-h-screen flex items-end justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="rellax absolute inset-0 w-full h-full" data-rellax-speed="-4">
+        <img src="img1.jpg" alt="Lord Ganesha" class="object-cover w-full h-full opacity-90">
+      </div>
+      <div class="gradient-animate absolute inset-0"></div>
+      <!-- tsParticles floating motifs removed -->
+      <!-- Overlay for better text readability -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-10"></div>
+    </div>
+    <div class="relative z-20 flex flex-col items-center text-center px-4 pb-16 w-full">
+      <h1 class="ganesh-heading text-4xl md:text-6xl font-extrabold text-white drop-shadow-2xl mb-4">Riddhi Siddhi Ganesh Foundation</h1>
+      <p class="text-lg md:text-2xl text-white/90 font-medium mb-8 drop-shadow-lg">Celebrating Ganesh Utsav with Devotion, Culture & Innovation</p>
+      <a href="#about" data-scroll class="inline-block px-8 py-3 rounded-full bg-orange-500 text-white text-xl font-bold shadow-lg hover:bg-orange-600 hover:shadow-orange-300 transition duration-300 animate-pulse">Know More</a>
+    </div>
   </section>
 
-  <script>
-    const countdown = document.getElementById("countdown");
-    const targetDate = new Date("2025-08-30T00:00:00").getTime();
-
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const diff = targetDate - now;
-
-      if (diff <= 0) {
-        countdown.innerHTML = "Ganesh Chaturthi is here! 🎉";
-        return;
-      }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s left`;
-    };
-
-    updateCountdown();
-    setInterval(updateCountdown, 1000);
-  </script>
-
-  <footer>
-    <p>&copy; 2025 Riddhi Siddhi Ganesh Foundation. All rights reserved.</p>
-    <p>Follow us on:
-      <a href="https://www.instagram.com/riddhisiddhiganeshfoundation" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i> Instagram
-      </a> |
-      <a href="https://www.youtube.com/@riddhisiddhiganeshfoundation" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-youtube"></i> YouTube
-      </a>
+  <!-- About Us Section -->
+  <section id="about" class="max-w-4xl mx-auto py-20 px-4 relative" data-aos="fade-up">
+    <!-- Parallax Motif -->
+    <img src="Logo.png" alt="Ganesh Motif" class="rellax absolute left-0 top-1/2 w-24 opacity-10 pointer-events-none select-none" data-rellax-speed="-2" style="z-index:0;"/>
+    <h2 class="text-3xl md:text-4xl font-bold text-orange-700 mb-6 text-center relative z-10">About Us</h2>
+    <p class="text-lg md:text-xl text-gray-800 leading-relaxed text-center relative z-10">
+      🙏🏻 Riddhi Siddhi Ganesh Foundation is one of the best foundations in Burhanpur, M.P. Established in 1995, for 30 years they are well known for their unique contribution towards Sarwajanik Ganesh Utsav. Most members are IT engineers, businessmen, and students. Their main motive is to influence Indian youth and families to celebrate this festival with small-sized Ganpati idols with peace and happiness. They always celebrate Ganesh Utsav with rituals given by Rishi Muni’s. Every year they present mythological themes through decorations to convey perfect messages to society.
     </p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="bg-yellow-50 py-24 px-4 relative">
+    <!-- Parallax Motif -->
+    <img src="Logo.png" alt="Ganesh Motif" class="rellax absolute right-0 top-10 w-28 opacity-10 pointer-events-none select-none" data-rellax-speed="2" style="z-index:0;"/>
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-bold text-orange-700 mb-12 text-center relative z-10">Gallery</h2>
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Carousel Slides -->
+        <div class="carousel-slide transition-opacity duration-700 ease-in-out">
+          <img src="Gallery/1.DNG" alt="Ganesh Utsav celebrations - 1" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+        </div>
+        <div class="carousel-slide hidden transition-opacity duration-700 ease-in-out">
+          <img src="Gallery/2.DNG" alt="Ganesh Utsav celebrations - 2" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+        </div>
+        <div class="carousel-slide hidden transition-opacity duration-700 ease-in-out">
+          <img src="Gallery/4.JPG" alt="Ganesh Utsav celebrations - 3" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+        </div>
+        <!-- Carousel Controls -->
+        <button id="carousel-prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white rounded-full p-4 md:p-3 shadow-lg hover:bg-orange-600 transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-orange-300 hidden sm:flex items-center justify-center" style="min-width:48px;min-height:48px;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <button id="carousel-next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white rounded-full p-4 md:p-3 shadow-lg hover:bg-orange-600 transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-orange-300 hidden sm:flex items-center justify-center" style="min-width:48px;min-height:48px;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+        <!-- Dots -->
+        <div class="flex justify-center mt-8 space-x-4">
+          <span class="carousel-dot w-5 h-5 rounded-full bg-orange-500 cursor-pointer transition"></span>
+          <span class="carousel-dot w-5 h-5 rounded-full bg-gray-300 cursor-pointer transition"></span>
+          <span class="carousel-dot w-5 h-5 rounded-full bg-gray-300 cursor-pointer transition"></span>
+          <span class="carousel-dot w-5 h-5 rounded-full bg-gray-300 cursor-pointer transition"></span>
+          <span class="carousel-dot w-5 h-5 rounded-full bg-gray-300 cursor-pointer transition"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="bg-orange-50 py-24 px-4 relative">
+    <!-- Parallax Motif -->
+    <img src="Logo.png" alt="Ganesh Motif" class="rellax absolute left-1/2 bottom-0 w-32 opacity-10 pointer-events-none select-none" data-rellax-speed="-3" style="transform:translateX(-50%);z-index:0;"/>
+    <div class="max-w-6xl mx-auto" data-aos="fade-up">
+      <h2 class="text-4xl md:text-5xl font-bold text-orange-700 mb-12 text-center relative z-10">Achievements</h2>
+      <!-- Animated Counters Row -->
+      <div class="flex flex-wrap justify-center gap-8 mb-12">
+        <div class="flex flex-col items-center">
+          <span id="counter-visitors" class="text-5xl md:text-6xl font-extrabold text-orange-600">0</span>
+          <span class="text-lg md:text-xl text-gray-700 mt-2">Visitors</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <span id="counter-years" class="text-5xl md:text-6xl font-extrabold text-orange-600">0</span>
+          <span class="text-lg md:text-xl text-gray-700 mt-2">Years of Service</span>
+        </div>
+      </div>
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Carousel Slides -->
+        <div class="ach-carousel-slide transition-opacity duration-700 ease-in-out">
+          <img src="Achivements/1.JPG" alt="Achievement 1 - Ganesh Utsav" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+        </div>
+        <div class="ach-carousel-slide hidden transition-opacity duration-700 ease-in-out">
+          <img src="Achivements/2.jpg" alt="Achievement 2 - Ganesh Utsav" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+        </div>
+        <div class="ach-carousel-slide hidden transition-opacity duration-700 ease-in-out">
+          <img src="Achivements/3.jpg" alt="Achievement 3 - Ganesh Utsav" class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+        </div>
+        <!-- Carousel Controls -->
+        <button id="ach-carousel-prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white rounded-full p-4 md:p-3 shadow-lg hover:bg-orange-600 transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-orange-300 hidden sm:flex items-center justify-center" style="min-width:48px;min-height:48px;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+        </button>
+        <button id="ach-carousel-next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-500 text-white rounded-full p-4 md:p-3 shadow-lg hover:bg-orange-600 transition active:scale-95 focus:outline-none focus:ring-2 focus:ring-orange-300 hidden sm:flex items-center justify-center" style="min-width:48px;min-height:48px;">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+        </button>
+        <!-- Dots -->
+        <div class="flex justify-center mt-8 space-x-4">
+          <span class="ach-carousel-dot w-5 h-5 rounded-full bg-orange-500 cursor-pointer transition"></span>
+          <span class="ach-carousel-dot w-5 h-5 rounded-full bg-gray-300 cursor-pointer transition"></span>
+          <span class="ach-carousel-dot w-5 h-5 rounded-full bg-gray-300 cursor-pointer transition"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact" class="max-w-4xl mx-auto py-20 px-4" data-aos="fade-right">
+    <h2 class="text-3xl md:text-4xl font-bold text-orange-700 mb-6 text-center">Contact Us</h2>
+    <div class="flex flex-col md:flex-row md:space-x-10 items-center md:items-start">
+      <div class="flex-1 mb-8 md:mb-0">
+        <ul class="space-y-3 text-lg">
+          <li>📍 <span class="font-semibold">Address:</span> Riddhi Siddhi Ganesh Foundation, Old Indira Colony, Burhanpur, Madhya Pradesh - 450331, India</li>
+          <li>📧 <span class="font-semibold">Email:</span> <a href="mailto:riddhisiddhiganeshfoundation@gmail.com" class="text-orange-600 hover:underline">riddhisiddhiganeshfoundation@gmail.com</a></li>
+          <li>📱 <span class="font-semibold">Phone / WhatsApp:</span> <a href="tel:+917415880717" class="text-orange-600 hover:underline">+91-7415880717</a></li>
+          <li>🕒 <span class="font-semibold">Timings:</span> Mon–Sat: 10:00 AM to 7:00 PM</li>
+          <li>📲 <span class="font-semibold">Follow Us:</span>
+            <a href="https://instagram.com/riddhisiddhiganeshfoundation" target="_blank" class="ml-2 text-pink-600 hover:underline">Instagram</a> |
+            <a href="https://youtube.com/@riddhisiddhiganeshfoundation" target="_blank" class="ml-2 text-red-600 hover:underline">YouTube</a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-1 w-full max-w-md">
+        <form action="https://formsubmit.co/riddhisiddhiganeshfoundation@gmail.com" method="POST" class="bg-white rounded-xl shadow-lg p-6 space-y-4">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="box">
+          <input type="text" name="Name" placeholder="Name" class="w-full px-4 py-2 border border-orange-200 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+          <input type="email" name="Email" placeholder="Email" class="w-full px-4 py-2 border border-orange-200 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" required>
+          <textarea name="Message" placeholder="Message" rows="4" class="w-full px-4 py-2 border border-orange-200 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" required></textarea>
+          <button type="submit" class="w-full py-2 rounded bg-orange-500 text-white font-bold text-lg hover:bg-orange-600 hover:shadow-orange-300 transition duration-300">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-orange-700 text-white text-center py-6 mt-10">
+    <div class="mb-2">&copy; 2025 Riddhi Siddhi Ganesh Foundation.</div>
+    <div>Designed with <span class="text-red-400">❤️</span> by RSG Developers</div>
   </footer>
+
+  <!-- Scripts -->
+  <!-- Rellax.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+  <!-- AOS.js -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- App JS -->
+  <script src="app.js"></script>
 </body>
 </html>
