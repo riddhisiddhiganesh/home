@@ -43,7 +43,7 @@
   <meta name="twitter:description" content="Celebrating Ganesh Utsav with devotion, culture, and innovation in Burhanpur, M.P.">
   <meta name="twitter:image" content="https://riddhisiddhiganesh.in/Logo.png">
 </head>
-<body class="bg-orange-50 text-gray-900 font-sans">
+<body class="bg-orange-50 text-gray-900 font-sans flex flex-col min-h-screen">
     <!-- Loader Overlay -->
     <div id="loader-overlay" class="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-orange-50 transition-opacity duration-700">
       <div class="flex flex-col items-center">
@@ -53,7 +53,8 @@
         <div class="text-orange-500 text-lg font-medium mt-2">Loading, please wait...</div>
       </div>
     </div>
-  <!-- Navbar -->
+    <main class="flex-1">
+      <!-- Navbar -->
   <nav class="fixed w-full z-30 bg-transparent">
     <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
       <div class="flex items-center space-x-3">
@@ -84,21 +85,19 @@
 
   <!-- Hero Section -->
   <section id="home" class="relative min-h-screen flex items-end justify-center overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <div class="rellax absolute inset-0 w-full h-full" data-rellax-speed="-4">
-        <img src="img1.jpg" alt="Lord Ganesha" class="object-cover w-full h-full opacity-90">
-      </div>
-      <div class="gradient-animate absolute inset-0"></div>
-      <!-- tsParticles floating motifs removed -->
-      <!-- Overlay for better text readability -->
-      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent z-10"></div>
-    </div>
-    <div class="relative z-20 flex flex-col items-center text-center px-4 pb-16 w-full">
-      <h1 class="ganesh-heading text-4xl md:text-6xl font-extrabold text-white drop-shadow-2xl mb-4">Riddhi Siddhi Ganesh Foundation</h1>
-      <p class="text-lg md:text-2xl text-white/90 font-medium mb-8 drop-shadow-lg">Celebrating Ganesh Utsav with Devotion, Culture & Innovation</p>
-      <a href="#about" data-scroll class="inline-block px-8 py-3 rounded-full bg-orange-500 text-white text-xl font-bold shadow-lg hover:bg-orange-600 hover:shadow-orange-300 transition duration-300 animate-pulse">Know More</a>
-    </div>
-  </section>
+        <div class="absolute inset-0 z-0">
+          <div class="rellax absolute inset-0 w-full h-full" data-rellax-speed="-4">
+            <img src="MobileImg.JPG" alt="Lord Ganesha Mobile" class="object-cover w-full h-full opacity-90 block md:hidden">
+            <img src="img1.jpg" alt="Lord Ganesha" class="object-cover w-full h-full opacity-90 hidden md:block">
+          </div>
+          <!-- tsParticles floating motifs removed -->
+        </div>
+        <div class="relative z-20 flex flex-col items-center text-center px-4 pb-16 w-full">
+          <h1 class="ganesh-heading text-4xl md:text-6xl font-extrabold text-white drop-shadow-2xl mb-4">Riddhi Siddhi Ganesh Foundation</h1>
+          <p class="text-lg md:text-2xl text-white/90 font-medium mb-8 drop-shadow-lg">Celebrating Ganesh Utsav with Devotion, Culture & Innovation</p>
+          <a href="#about" data-scroll class="inline-block px-8 py-3 rounded-full bg-orange-500 text-white text-xl font-bold shadow-lg hover:bg-orange-600 hover:shadow-orange-300 transition duration-300 animate-pulse">Know More</a>
+        </div>
+      </section>
 
   <!-- About Us Section -->
   <section id="about" class="max-w-4xl mx-auto py-20 px-4 relative" data-aos="fade-up">
@@ -219,19 +218,19 @@
       </div>
     </div>
   </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-orange-700 text-white text-center py-6">
+      <div class="mb-2">&copy; 2025 Riddhi Siddhi Ganesh Foundation.</div>
+      <div>Designed with <span class="text-red-400">❤️</span> by RSG Developers</div>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="bg-orange-700 text-white text-center py-6 mt-10">
-    <div class="mb-2">&copy; 2025 Riddhi Siddhi Ganesh Foundation.</div>
-    <div>Designed with <span class="text-red-400">❤️</span> by RSG Developers</div>
-  </footer>
-
-  <!-- Scripts -->
-  <!-- Rellax.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
-  <!-- AOS.js -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <!-- App JS -->
-  <script src="app.js"></script>
-</body>
+    <!-- Scripts -->
+    <!-- Rellax.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js"></script>
+    <!-- AOS.js -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <!-- App JS -->
+    <script src="app.js"></script>
+  </body>
 </html>
